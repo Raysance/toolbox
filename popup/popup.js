@@ -92,6 +92,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const undoBtn = document.getElementById('undoBtn');
     const ungroupBtn = document.getElementById('ungroupBtn');
 
+    function getApiConfig(settings) {
+        const provider = API_PROVIDERS.find(p => p.id === settings.apiProvider) || API_PROVIDERS[0];
+        return {
+            provider,
+            url: provider.id === 'custom' ? settings.customUrl : provider.url,
+            model: provider.id === 'custom' ? settings.customModel : provider.model
+        };
+    }
+
     // 切换菜单显示
     strategyToggle.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -220,21 +229,31 @@ document.addEventListener('DOMContentLoaded', async () => {
             const tabData = tabs.map(t => ({ id: t.id, title: t.title, url: t.url }));
 
             const systemPrompt = SEARCH_SYSTEM_PROMPTS[settings.language] || SEARCH_SYSTEM_PROMPTS.en;
+            const apiConfig = getApiConfig(settings);
 
-            const response = await fetch(API_CONFIG.URL, {
+            if (!apiConfig.url || !apiConfig.model) {
+                throw new Error("API URL or model is not configured");
+            }
+
+            const requestBody = {
+                model: apiConfig.model,
+                messages: [
+                    { role: "system", content: systemPrompt },
+                    { role: "user", content: `用户需求：${keyword}\n\n标签页列表：${JSON.stringify(tabData)}` }
+                ]
+            };
+
+            if (apiConfig.provider.supportJsonMode || apiConfig.provider.id === 'custom') {
+                requestBody.response_format = { type: "json_object" };
+            }
+
+            const response = await fetch(apiConfig.url, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${settings.apiKey}`
                 },
-                body: JSON.stringify({
-                    model: API_CONFIG.MODEL,
-                    messages: [
-                        { role: "system", content: systemPrompt },
-                        { role: "user", content: `用户需求：${keyword}\n\n标签页列表：${JSON.stringify(tabData)}` }
-                    ],
-                    response_format: { type: "json_object" }
-                })
+                body: JSON.stringify(requestBody)
             });
 
             if (!response.ok) {
@@ -243,7 +262,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             const data = await response.json();
-            const aiContent = data.choices[0].message.content;
+
+            if (!data.choices || data.choices.length === 0) {
+                console.error("Invalid API Response:", data);
+                throw new Error(data.error?.message || "API returned no choices");
+            }
+
+            let aiContent = data.choices[0].message.content;
+
+            if (aiContent.includes("```")) {
+                const match = aiContent.match(/```(?:json)?\s*([\s\S]*?)```/);
+                if (match && match[1]) {
+                    aiContent = match[1].trim();
+                }
+            }
             
             if (settings.debugMode) console.log("AI Search Result:", aiContent);
 

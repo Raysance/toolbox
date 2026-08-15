@@ -161,13 +161,13 @@ Notes:
 
 export const SEARCH_SYSTEM_PROMPTS = {
     zh: `你是一个标签页筛选助手。请根据用户的需求描述，从提供的标签页列表中筛选出匹配的标签页。
-返回格式必须是纯 JSON 数组，仅包含匹配的 tabId。
-例如：[1, 2, 3]
-如果没有匹配项，返回 []。不要包含任何解释文字。`,
+返回格式必须是纯 JSON 对象，仅包含 tabIds 字段。
+例如：{"tabIds": [1, 2, 3]}
+如果没有匹配项，返回 {"tabIds": []}。不要包含任何解释文字。`,
     en: `You are a tab filtering assistant. Filter the provided list of tabs based on the user's requirement.
-Return MUST be a pure JSON array of matched tabIds.
-Example: [1, 2, 3]
-Return [] if no matches. Do not include any explanation.`
+Return MUST be a pure JSON object containing only the tabIds field.
+Example: {"tabIds": [1, 2, 3]}
+Return {"tabIds": []} if no matches. Do not include any explanation.`
 };
 
 export const TRANSLATIONS = {
