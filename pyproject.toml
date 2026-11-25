@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "msauth-totp-macos"
 version = "0.1.4"
-description = "Microsoft Authenticator Android cloud-backup login and TOTP key retrieval for macOS"
+description = "Microsoft Authenticator TOTP export SDK for macOS"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -17,7 +17,7 @@ dependencies = [
 classifiers = ["Operating System :: MacOS", "Programming Language :: Python :: 3"]
 
 [project.urls]
-Repository = "https://github.com/Raysance/msauth-totp-macos-sdk"
+Repository = "https://github.com/Raysance/microsoft-authenticator-totp-export"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10", "jwcrypto>=1.5,<2"]

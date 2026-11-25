@@ -22,7 +22,7 @@ class NetworkError(SDKError):
 
 
 class BackupNotFoundError(SDKError):
-    """The Microsoft recovery account has no readable Android cloud backup."""
+    """The Microsoft recovery account has no readable Authenticator cloud backup."""
 
 
 class BackupFormatError(ProtocolError):

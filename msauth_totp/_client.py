@@ -190,7 +190,7 @@ def login(username: str | None = None, *, state: LoginState | str | None = None,
 
 def get_totp_keys(state: LoginState, *, timeout: float = 30,
                   interactive_timeout: float = 900) -> tuple[TotpKey, ...]:
-    """Read TOTP secrets present in this recovery account's Android MSA backup.
+    """Read TOTP secrets present in this recovery account's Authenticator cloud backup.
 
     Verification requested by Microsoft is handled in the same native window.
     Missing backup, rejected login, and decryption failure raise distinct errors.

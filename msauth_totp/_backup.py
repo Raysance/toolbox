@@ -1,4 +1,4 @@
-"""Read-only Authenticator Android MSA backup protocol, APK 6.2611.7348."""
+"""Read Microsoft Authenticator cloud backups and extract TOTP secrets."""
 from __future__ import annotations
 
 import base64
@@ -72,7 +72,7 @@ def read_cloud_backup(http: requests.Session, cid: str, ticket: str, timeout: fl
             timeout=timeout, allow_redirects=False, stream=True,
         ) as response:
             if response.status_code == 404:
-                raise BackupNotFoundError("No Android MSA cloud backup was found for this recovery account.")
+                raise BackupNotFoundError("No Microsoft Authenticator cloud backup was found for this recovery account.")
             if response.status_code in (401, 403):
                 raise AuthenticationError("Microsoft rejected the backup access token.")
             if response.status_code != 200:
@@ -103,7 +103,7 @@ def read_cloud_backup(http: requests.Session, cid: str, ticket: str, timeout: fl
         raise BackupFormatError("Malformed Authenticator backup envelope.")
     # Gson's default constructor uses MSA if the legacy field is absent.
     if backup.get("backupType", "MSA") != "MSA":
-        raise UnsupportedBackupError("Only Authenticator Android MSA cloud backups are supported.")
+        raise UnsupportedBackupError("This Authenticator cloud backup type is not supported.")
     for key in ("msaKeyId", "encryptedBackup"):
         if not isinstance(backup.get(key), str) or not backup[key]:
             raise BackupFormatError("The backup is missing required encryption metadata.")
