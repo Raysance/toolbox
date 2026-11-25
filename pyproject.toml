@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msauth-totp-macos"
+version = "0.1.4"
+description = "Microsoft Authenticator Android cloud-backup login and TOTP key retrieval for macOS"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32,<3",
+    "cryptography>=43,<51",
+    "lxml>=5.3,<7",
+    "pyobjc-framework-WebKit>=11,<14; sys_platform == 'darwin'",
+]
+classifiers = ["Operating System :: MacOS", "Programming Language :: Python :: 3"]
+
+[project.urls]
+Repository = "https://github.com/Raysance/msauth-totp-macos-sdk"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "jwcrypto>=1.5,<2"]
+
+[tool.setuptools.packages.find]
+include = ["msauth_totp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
