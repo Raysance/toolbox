@@ -1,4 +1,4 @@
-import { API_PROVIDERS, DEFAULT_SETTINGS, POPUP_TRANSLATIONS } from './constants.js';
+import { API_PROVIDERS, DEFAULT_SETTINGS, POPUP_TRANSLATIONS, STRATEGIES } from './constants.js';
 
 chrome.commands.onCommand.addListener((command) => {
     if (command === "organize_tabs") {
@@ -93,7 +93,7 @@ async function injectToast(message, type) {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "organizeTabs") {
-        organizeTabsAction(request.customPrompt).then(sendResponse);
+        organizeTabsAction(request.customPrompt, request.strategyId).then(sendResponse);
         return true; // 保持异步
     } else if (request.action === "undo") {
         undoLastAction().then(sendResponse);
@@ -134,6 +134,49 @@ async function saveToHistory(historyData) {
     return { success: true };
 }
 
+async function restoreTabsFromHistory(lastAction) {
+    // 记录哪些 tab 需要被移动回哪些组
+    const groupsToRestore = {};
+    const restoredWindowIds = {};
+
+    for (const item of lastAction.data) {
+        const tab = await chrome.tabs.get(item.id).catch(() => null);
+        if (tab) {
+            // 1. 移出当前可能存在的组（因为我们要恢复到旧的状态）
+            await chrome.tabs.ungroup(item.id).catch(() => {});
+
+            // 2. 移动回到原来的窗口和索引；如果原窗口已被 Chrome 自动关闭，则重建一个窗口。
+            let targetWindowId = restoredWindowIds[item.windowId] || item.windowId;
+            const targetWindow = await chrome.windows.get(targetWindowId).catch(() => null);
+            if (targetWindow) {
+                await chrome.tabs.move(item.id, { windowId: targetWindowId, index: item.index });
+            } else {
+                const newWindow = await chrome.windows.create({ tabId: item.id, focused: false });
+                restoredWindowIds[item.windowId] = newWindow.id;
+            }
+
+            // 3. 收集原有的分组信息
+            if (item.groupId !== -1) {
+                if (!groupsToRestore[item.groupId]) {
+                    groupsToRestore[item.groupId] = [];
+                }
+                groupsToRestore[item.groupId].push(item.id);
+            }
+        }
+    }
+
+    // 4. 恢复原有的分组结构
+    for (const oldGroupId in groupsToRestore) {
+        const tabIds = groupsToRestore[oldGroupId];
+        // 重新创建组并尝试恢复原名和颜色
+        const newGroupId = await chrome.tabs.group({ tabIds: tabIds }).catch(() => null);
+        if (newGroupId && lastAction.groupsInfo[oldGroupId]) {
+            const info = lastAction.groupsInfo[oldGroupId];
+            await chrome.tabGroups.update(newGroupId, { title: info.title, color: info.color });
+        }
+    }
+}
+
 async function undoLastAction() {
     if (undoHistory.length === 0) {
         return { success: false, error: "no_history" };
@@ -141,37 +184,11 @@ async function undoLastAction() {
 
     const lastAction = undoHistory.pop();
     try {
-        if (lastAction.type === 'groups') {
-            // 记录哪些 tab 需要被移动回哪些组
-            const groupsToRestore = {};
-
-            for (const item of lastAction.data) {
-                const tab = await chrome.tabs.get(item.id).catch(() => null);
-                if (tab) {
-                    // 1. 移出当前可能存在的组（因为我们要恢复到旧的状态）
-                    await chrome.tabs.ungroup(item.id).catch(() => {});
-                    
-                    // 2. 移动回到原来的窗口和索引
-                    await chrome.tabs.move(item.id, { windowId: item.windowId, index: item.index });
-                    
-                    // 3. 收集原有的分组信息
-                    if (item.groupId !== -1) {
-                        if (!groupsToRestore[item.groupId]) {
-                            groupsToRestore[item.groupId] = [];
-                        }
-                        groupsToRestore[item.groupId].push(item.id);
-                    }
-                }
-            }
-
-            // 4. 恢复原有的分组结构
-            for (const oldGroupId in groupsToRestore) {
-                const tabIds = groupsToRestore[oldGroupId];
-                // 重新创建组并尝试恢复原名和颜色
-                const newGroupId = await chrome.tabs.group({ tabIds: tabIds }).catch(() => null);
-                if (newGroupId && lastAction.groupsInfo[oldGroupId]) {
-                    const info = lastAction.groupsInfo[oldGroupId];
-                    await chrome.tabGroups.update(newGroupId, { title: info.title, color: info.color });
+        if (lastAction.type === 'groups' || lastAction.type === 'windows') {
+            await restoreTabsFromHistory(lastAction);
+            if (lastAction.type === 'windows' && Array.isArray(lastAction.newWindowIds)) {
+                for (const windowId of lastAction.newWindowIds) {
+                    await chrome.windows.remove(windowId).catch(() => {});
                 }
             }
         } else if (lastAction.type === 'extract') {
@@ -194,9 +211,79 @@ async function undoLastAction() {
     }
 }
 
-async function organizeTabsAction(customPrompt) {
+function getStrategyPrompt(strategyId, language) {
+    const strategy = STRATEGIES.find(s => s.id === strategyId);
+    return strategy ? (strategy.prompts[language] || strategy.prompts.en) : '';
+}
+
+function normalizeWorkLeisureGroups(groups, tabs) {
+    const validTabIds = new Set(tabs.map(tab => tab.id));
+    const assignedTabIds = new Set();
+    const buckets = {
+        work: { groupName: "学习/科研/工作", tabIds: [] },
+        leisure: { groupName: "娱乐/游戏/动漫", tabIds: [] }
+    };
+
+    const inferCategory = (group) => {
+        const raw = `${group.category || ''} ${group.groupName || ''}`.toLowerCase();
+        if (raw.includes('leisure') || raw.includes('entertainment') || raw.includes('game') || raw.includes('anime') ||
+            raw.includes('娱乐') || raw.includes('游戏') || raw.includes('动漫') || raw.includes('休闲')) {
+            return 'leisure';
+        }
+        return 'work';
+    };
+
+    for (const group of groups) {
+        const category = inferCategory(group);
+        const target = buckets[category];
+        const tabIds = Array.isArray(group.tabIds) ? group.tabIds : [];
+        for (const rawId of tabIds) {
+            const tabId = parseInt(rawId);
+            if (!Number.isNaN(tabId) && validTabIds.has(tabId) && !assignedTabIds.has(tabId)) {
+                target.tabIds.push(tabId);
+                assignedTabIds.add(tabId);
+            }
+        }
+    }
+
+    // 模型偶尔会漏掉少量标签页；为了不丢标签，默认放入工作/学习窗口。
+    for (const tab of tabs) {
+        if (!assignedTabIds.has(tab.id)) {
+            buckets.work.tabIds.push(tab.id);
+        }
+    }
+
+    return [buckets.work, buckets.leisure].filter(group => group.tabIds.length > 0);
+}
+
+async function moveGroupsToSeparateWindows(groups, tabs) {
+    const splitGroups = normalizeWorkLeisureGroups(groups, tabs);
+    const createdWindowIds = [];
+
+    for (const group of splitGroups) {
+        const tabIds = [...new Set(group.tabIds)];
+        if (tabIds.length === 0) continue;
+
+        const newWindow = await chrome.windows.create({ tabId: tabIds[0], focused: false });
+        createdWindowIds.push(newWindow.id);
+
+        if (tabIds.length > 1) {
+            await chrome.tabs.move(tabIds.slice(1), { windowId: newWindow.id, index: -1 });
+        }
+
+        const groupId = await chrome.tabs.group({ tabIds }).catch(() => null);
+        if (groupId !== null) {
+            await chrome.tabGroups.update(groupId, { title: group.groupName });
+        }
+    }
+
+    return createdWindowIds;
+}
+
+async function organizeTabsAction(customPrompt, strategyId) {
     try {
         const settings = await chrome.storage.sync.get(DEFAULT_SETTINGS);
+        const activeStrategyId = strategyId || settings.strategy;
 
         if (!settings.apiKey) {
             const t = POPUP_TRANSLATIONS[settings.language] || POPUP_TRANSLATIONS.en;
@@ -204,7 +291,7 @@ async function organizeTabsAction(customPrompt) {
         }
 
         // 使用传递过来的自定义提示词，如果没有则使用存储中的
-        let finalPrompt = customPrompt || settings.prompt;
+        let finalPrompt = customPrompt || settings.prompt || getStrategyPrompt(activeStrategyId, settings.language);
         
         if (!finalPrompt) {
             const t = POPUP_TRANSLATIONS[settings.language] || POPUP_TRANSLATIONS.en;
@@ -326,6 +413,20 @@ async function organizeTabsAction(customPrompt) {
         
         // 兼容某些模型可能返回的对象包裹情况
         const groups = Array.isArray(result) ? result : (result.groups || []);
+
+        if (activeStrategyId === 'work_leisure_windows') {
+            if (groups.length === 0) {
+                throw new Error("AI returned no groups");
+            }
+
+            const newWindowIds = await moveGroupsToSeparateWindows(groups, tabs);
+            await saveToHistory({
+                ...historyData,
+                type: 'windows',
+                newWindowIds
+            });
+            return { success: true };
+        }
 
         if (groups.length > 0) {
             await saveToHistory(historyData);

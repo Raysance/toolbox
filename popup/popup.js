@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const t = POPUP_TRANSLATIONS[lang] || POPUP_TRANSLATIONS.en;
 
         const selectedStrategyId = strategySelect.value;
+        const activeStrategyId = selectedStrategyId === 'current' ? settings.strategy : selectedStrategyId;
         let finalPrompt = settings.prompt;
 
         if (selectedStrategyId !== 'current') {
@@ -182,7 +183,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         chrome.runtime.sendMessage({ 
             action: "organizeTabs",
-            customPrompt: finalPrompt 
+            customPrompt: finalPrompt,
+            strategyId: activeStrategyId
         }, (response) => {
             btn.disabled = false;
             if (response && response.success) {

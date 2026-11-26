@@ -156,6 +156,53 @@ Notes:
 2. Include all provided tabIds.
 3. Return ONLY JSON.`
         }
+    },
+    {
+        id: 'work_leisure_windows',
+        name: {
+            zh: '工作/娱乐分窗',
+            en: 'Work/Leisure Windows'
+        },
+        prompts: {
+            zh: `你是一个浏览器标签页整理助手。请把所有标签页严格分成两个大类，用于最终拆成两个窗口：
+1. 【学习/科研/工作】：学习资料、论文、文档、课程、代码、开发工具、搜索资料、工作沟通、生产力工具、任务管理、邮箱、日程、职业相关内容。
+2. 【娱乐/游戏/动漫】：视频、直播、音乐、游戏、动漫、漫画、小说、社交娱乐、购物消遣、娱乐网站、休闲资讯。
+
+判断规则：
+- 重点结合标题和 URL，不要只看域名；同一网站可能同时有工作内容和娱乐内容。
+- 如果页面用途含糊，请根据“此刻更可能服务于学习/工作还是休闲娱乐”判断。
+- 工具、文档、论文、课程、代码仓库、AI/搜索辅助默认归入【学习/科研/工作】。
+- 视频/直播/番剧/游戏/漫画/娱乐网站默认归入【娱乐/游戏/动漫】，除非标题明确是教程、课程、会议、论文或工作材料。
+- 每个 tabId 必须且只能出现一次；不要遗漏任何标签页。
+
+输出必须是纯 JSON 对象，格式如下：
+{
+  "groups": [
+    {"groupName": "学习/科研/工作", "category": "work", "tabIds": [1, 2]},
+    {"groupName": "娱乐/游戏/动漫", "category": "leisure", "tabIds": [3, 4]}
+  ]
+}
+仅返回 JSON，不要解释。`,
+            en: `You are a browser tab organization assistant. Split all tabs into exactly two high-level categories so they can be moved into two separate windows:
+1. 【Study/Research/Work】: learning materials, papers, docs, courses, code, developer tools, research/search pages, work communication, productivity tools, task management, email, calendar, career-related content.
+2. 【Entertainment/Games/Anime】: videos, livestreams, music, games, anime, manga, novels, casual social browsing, leisure shopping, entertainment sites, hobby/news pages.
+
+Rules:
+- Use both title and URL; do not classify by domain alone because the same site may contain work and entertainment.
+- If intent is ambiguous, decide whether the page is more likely serving focused study/work or leisure.
+- Tools, docs, papers, courses, repositories, AI/search assistance default to 【Study/Research/Work】.
+- Video/livestream/anime/game/manga/entertainment pages default to 【Entertainment/Games/Anime】 unless the title clearly says it is a tutorial, course, meeting, paper, or work material.
+- Every tabId MUST appear exactly once; do not omit any tabs.
+
+Return pure JSON object only:
+{
+  "groups": [
+    {"groupName": "Study/Research/Work", "category": "work", "tabIds": [1, 2]},
+    {"groupName": "Entertainment/Games/Anime", "category": "leisure", "tabIds": [3, 4]}
+  ]
+}
+Return JSON only, with no explanation.`
+        }
     }
 ];
 
