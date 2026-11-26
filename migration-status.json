@@ -1,5 +1,53 @@
 {
   "date": "2026-11-26",
-  "migration": "prepared",
-  "originalRepositories": "not-deleted"
+  "migration": "verified",
+  "publicRepository": "https://github.com/Raysance/toolbox",
+  "tools": [
+    "inboxcode",
+    "authcode",
+    "folderbridge",
+    "codex-companion",
+    "raynote",
+    "pagepilot"
+  ],
+  "originalHistory": {
+    "codex-companion": {
+      "commitsPreserved": 6,
+      "tagObjectsPreserved": true,
+      "remoteVerified": true,
+      "originalUnchanged": true
+    },
+    "RayNote": {
+      "commitsPreserved": 11,
+      "tagObjectsPreserved": true,
+      "remoteVerified": true,
+      "originalUnchanged": true
+    },
+    "PagePilot": {
+      "commitsPreserved": 18,
+      "tagObjectsPreserved": true,
+      "remoteVerified": true,
+      "originalUnchanged": true
+    }
+  },
+  "releases": {
+    "releases": 9,
+    "assets": 20,
+    "sha256Verified": true
+  },
+  "ci": {
+    "codex-companion": "success",
+    "run": 45798371227
+  },
+  "localInstalledNames": [
+    "InboxCode",
+    "AuthCode"
+  ],
+  "originalRepositories": {
+    "codex-companion": "not-deleted",
+    "RayNote": "not-deleted",
+    "PagePilot": "not-deleted"
+  },
+  "deletionBlocker": "GitHub CLI OAuth token lacks delete_repo scope; GitHub API returned HTTP 403.",
+  "backupSHA256": "cd94a5847a63a1c78d5e5a5c70cc5438ea4fcdbb192d3faa00703559901ce9b2"
 }
