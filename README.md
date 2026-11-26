@@ -1,12 +1,15 @@
 # RayNote
 
+> This project now lives in the **`raynote`** branch of [Raysance/toolbox](https://github.com/Raysance/toolbox/tree/raynote). Original commits and version tags are preserved. [Toolbox catalog](https://github.com/Raysance/toolbox) · [Migration history](https://github.com/Raysance/toolbox/blob/main/MIGRATION.md)
+
+
 随时打开，随手记录。RayNote 将浮动笔记窗口、富文本编辑和快捷搜索放在一起，让写作与查阅触手可及。笔记自动保存在本机，离线也能使用。
 
 RayNote 基于 Raycast Notes，由 Codex（GPT-6.1 Sol）提取并封装为独立的本地笔记应用。
 
 ## 开始使用
 
-从 [Releases](https://github.com/Raysance/RayNote/releases/latest) 下载应用，解压后将 `RayNote.app` 拖入“应用程序”文件夹，打开即可写作。
+从 [Releases](https://github.com/Raysance/toolbox/releases/tag/raynote%2Fv0.3.1) 下载应用，解压后将 `RayNote.app` 拖入“应用程序”文件夹，打开即可写作。
 
 ## 编辑与整理
 
@@ -39,4 +42,4 @@ RayNote 基于 Raycast Notes，由 Codex（GPT-6.1 Sol）提取并封装为独�
 
 备份时先退出 RayNote，再复制整个目录，包含读取笔记所需的密钥文件 `PrivateCredentials.plist`。恢复或换机时，退出应用，将完整备份放回同一路径，再打开 RayNote。
 
-问题与建议可提交至 [Issues](https://github.com/Raysance/RayNote/issues)。
+问题与建议可提交至 [Issues](https://github.com/Raysance/toolbox/issues)。
