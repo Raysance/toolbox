@@ -1,5 +1,8 @@
 # PagePilot
 
+> This project now lives in the **`pagepilot`** branch of [Raysance/toolbox](https://github.com/Raysance/toolbox/tree/pagepilot). Original commits and version tags are preserved. [Toolbox catalog](https://github.com/Raysance/toolbox) · [Migration history](https://github.com/Raysance/toolbox/blob/main/MIGRATION.md)
+
+
 PagePilot is a browser extension (Edge/Chrome) powered by DeepSeek AI, designed to optimize large-scale tab management through intelligent algorithms.
 
 ## Core Features
