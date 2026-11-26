@@ -1,5 +1,8 @@
 # Codex Companion
 
+> This project now lives in the **`codex-companion`** branch of [Raysance/toolbox](https://github.com/Raysance/toolbox/tree/codex-companion). Original commits and version tags are preserved. [Toolbox catalog](https://github.com/Raysance/toolbox) · [Migration history](https://github.com/Raysance/toolbox/blob/main/MIGRATION.md)
+
+
 A native macOS companion for local Codex history: token usage, quota timelines, input vocabulary, and provider migration. A single app and Swift package; provider migration is an integrated tool.
 
 ## Activity
