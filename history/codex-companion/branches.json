@@ -1,0 +1,19 @@
+[
+  {
+    "name": "main",
+    "commit": {
+      "sha": "4b301c1ed22d946467a5b3c6dc7bd1fde37543a7",
+      "url": "https://api.github.com/repos/Raysance/codex-companion/commits/4b301c1ed22d946467a5b3c6dc7bd1fde37543a7"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Raysance/codex-companion/branches/main/protection"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "release": "v0.3.1",
+    "new_tag": "raynote/v0.3.1",
+    "name": "RayNote-DependencyAudit.json",
+    "bytes": 3071,
+    "sha256": "037e3e332610594182a6ed8f3b7f5cf6af7cecc7476c84458c00408c30aa3b9f"
+  },
+  {
+    "release": "v0.3.1",
+    "new_tag": "raynote/v0.3.1",
+    "name": "RayNote-macOS-arm64.zip",
+    "bytes": 23960039,
+    "sha256": "086ef72b130670a9278105b3c4494c535f5d99078470048773303bb049271226"
+  },
+  {
+    "release": "v0.3.1",
+    "new_tag": "raynote/v0.3.1",
+    "name": "RayNote-Resource-Dependencies.md",
+    "bytes": 2514,
+    "sha256": "ad6a3cd6897abb4f761c8f13c70f854980731516df9a29c3a226ae8dce2ec2f0"
+  },
+  {
+    "release": "v0.3.1",
+    "new_tag": "raynote/v0.3.1",
+    "name": "RayNote-SHA256SUMS.txt",
+    "bytes": 461,
+    "sha256": "4c9dfd61e0aaa03a674810f7238d317f44b5b0e2fdb4cd72c9670ddfbd6c2bf9"
+  },
+  {
+    "release": "v0.3.1",
+    "new_tag": "raynote/v0.3.1",
+    "name": "RayNote-source.zip",
+    "bytes": 47042,
+    "sha256": "0e1a9ed0c8f8be107b41fffdd1a421087741b80a00e1e8672e5264319883858f"
+  },
+  {
+    "release": "v0.3.1",
+    "new_tag": "raynote/v0.3.1",
+    "name": "RayNote-Verification.json",
+    "bytes": 4227,
+    "sha256": "088725401f9ae072eb91dad8ebeb5115ea62122ab2a0a014451c607549a3d5ba"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "raynote/v0.3.0",
+    "name": "RayNote-DependencyAudit.json",
+    "bytes": 3071,
+    "sha256": "037e3e332610594182a6ed8f3b7f5cf6af7cecc7476c84458c00408c30aa3b9f"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "raynote/v0.3.0",
+    "name": "RayNote-macOS-arm64.zip",
+    "bytes": 23598828,
+    "sha256": "5cd63794e8e37312a324dc49eba087533c78f704b821c78c381410220eb2cce1"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "raynote/v0.3.0",
+    "name": "RayNote-Resource-Dependencies.md",
+    "bytes": 2435,
+    "sha256": "3ea2f5605e991e20c06cad0a70ea10267ffd7dd7b4321691b2d9f75d4cb8e9f0"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "raynote/v0.3.0",
+    "name": "RayNote-SHA256SUMS.txt",
+    "bytes": 461,
+    "sha256": "90a0556a9357b7e3a8eea06ce854fdc77322170ad2282c2d25f4928c9f7566a5"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "raynote/v0.3.0",
+    "name": "RayNote-source.zip",
+    "bytes": 44594,
+    "sha256": "05bd8f862a7b970d1a8bb5824c3410db0cdbc573f40e263cba2eda7c39111bcb"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "raynote/v0.3.0",
+    "name": "RayNote-Verification.json",
+    "bytes": 6140,
+    "sha256": "b40eea2f00eb64c80257c6854255ce54f7229b2bc333c540adc6f781b8ec95a2"
+  }
+]

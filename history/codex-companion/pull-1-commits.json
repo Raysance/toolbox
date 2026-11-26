@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "1a29970aee1772bf257c47703ddef2126c611ef4",
+    "node_id": "C_kwDOT8H7RdoAKDFhMjk5NzBhZWUxNzcyYmYyNTdjNDc3MDNkZGVmMjEyNmM2MTFlZjQ",
+    "commit": {
+      "author": {
+        "name": "Raysance",
+        "email": "zhdxlz1101@sjtu.edu.cn",
+        "date": "2026-10-20T10:09:20Z"
+      },
+      "committer": {
+        "name": "Raysance",
+        "email": "zhdxlz1101@sjtu.edu.cn",
+        "date": "2026-10-20T10:09:20Z"
+      },
+      "message": "Expand migrator into a local Codex usage companion",
+      "tree": {
+        "sha": "a37ed157e05059856019035e10c74269959b6985",
+        "url": "https://api.github.com/repos/Raysance/codex-companion/git/trees/a37ed157e05059856019035e10c74269959b6985"
+      },
+      "url": "https://api.github.com/repos/Raysance/codex-companion/git/commits/1a29970aee1772bf257c47703ddef2126c611ef4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Raysance/codex-companion/commits/1a29970aee1772bf257c47703ddef2126c611ef4",
+    "html_url": "https://github.com/Raysance/codex-companion/commit/1a29970aee1772bf257c47703ddef2126c611ef4",
+    "comments_url": "https://api.github.com/repos/Raysance/codex-companion/commits/1a29970aee1772bf257c47703ddef2126c611ef4/comments",
+    "author": {
+      "login": "Raysance",
+      "id": 35187931,
+      "node_id": "MDQ6VXNlcjM1MTg3OTMx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35187931?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Raysance",
+      "html_url": "https://github.com/Raysance",
+      "followers_url": "https://api.github.com/users/Raysance/followers",
+      "following_url": "https://api.github.com/users/Raysance/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Raysance/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Raysance/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Raysance/subscriptions",
+      "organizations_url": "https://api.github.com/users/Raysance/orgs",
+      "repos_url": "https://api.github.com/users/Raysance/repos",
+      "events_url": "https://api.github.com/users/Raysance/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Raysance/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Raysance",
+      "id": 35187931,
+      "node_id": "MDQ6VXNlcjM1MTg3OTMx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35187931?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Raysance",
+      "html_url": "https://github.com/Raysance",
+      "followers_url": "https://api.github.com/users/Raysance/followers",
+      "following_url": "https://api.github.com/users/Raysance/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Raysance/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Raysance/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Raysance/subscriptions",
+      "organizations_url": "https://api.github.com/users/Raysance/orgs",
+      "repos_url": "https://api.github.com/users/Raysance/repos",
+      "events_url": "https://api.github.com/users/Raysance/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Raysance/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e47dc61d8fbc33f6a104224f7887eaf896f07edd",
+        "url": "https://api.github.com/repos/Raysance/codex-companion/commits/e47dc61d8fbc33f6a104224f7887eaf896f07edd",
+        "html_url": "https://github.com/Raysance/codex-companion/commit/e47dc61d8fbc33f6a104224f7887eaf896f07edd"
+      }
+    ]
+  },
+  {
+    "sha": "b9a4709f74efb87376fe3175ef18f7ce6cf638b4",
+    "node_id": "C_kwDOT8H7RdoAKGI5YTQ3MDlmNzRlZmI4NzM3NmZlMzE3NWVmMThmN2NlNmNmNjM4YjQ",
+    "commit": {
+      "author": {
+        "name": "Raysance",
+        "email": "zhdxlz1101@sjtu.edu.cn",
+        "date": "2026-10-20T10:13:49Z"
+      },
+      "committer": {
+        "name": "Raysance",
+        "email": "zhdxlz1101@sjtu.edu.cn",
+        "date": "2026-10-20T10:13:49Z"
+      },
+      "message": "Make complete vocabulary and recent input history accessible",
+      "tree": {
+        "sha": "d16324276c6596104bb2842ee7afcee652f0888d",
+        "url": "https://api.github.com/repos/Raysance/codex-companion/git/trees/d16324276c6596104bb2842ee7afcee652f0888d"
+      },
+      "url": "https://api.github.com/repos/Raysance/codex-companion/git/commits/b9a4709f74efb87376fe3175ef18f7ce6cf638b4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Raysance/codex-companion/commits/b9a4709f74efb87376fe3175ef18f7ce6cf638b4",
+    "html_url": "https://github.com/Raysance/codex-companion/commit/b9a4709f74efb87376fe3175ef18f7ce6cf638b4",
+    "comments_url": "https://api.github.com/repos/Raysance/codex-companion/commits/b9a4709f74efb87376fe3175ef18f7ce6cf638b4/comments",
+    "author": {
+      "login": "Raysance",
+      "id": 35187931,
+      "node_id": "MDQ6VXNlcjM1MTg3OTMx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35187931?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Raysance",
+      "html_url": "https://github.com/Raysance",
+      "followers_url": "https://api.github.com/users/Raysance/followers",
+      "following_url": "https://api.github.com/users/Raysance/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Raysance/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Raysance/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Raysance/subscriptions",
+      "organizations_url": "https://api.github.com/users/Raysance/orgs",
+      "repos_url": "https://api.github.com/users/Raysance/repos",
+      "events_url": "https://api.github.com/users/Raysance/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Raysance/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Raysance",
+      "id": 35187931,
+      "node_id": "MDQ6VXNlcjM1MTg3OTMx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35187931?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Raysance",
+      "html_url": "https://github.com/Raysance",
+      "followers_url": "https://api.github.com/users/Raysance/followers",
+      "following_url": "https://api.github.com/users/Raysance/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Raysance/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Raysance/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Raysance/subscriptions",
+      "organizations_url": "https://api.github.com/users/Raysance/orgs",
+      "repos_url": "https://api.github.com/users/Raysance/repos",
+      "events_url": "https://api.github.com/users/Raysance/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Raysance/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1a29970aee1772bf257c47703ddef2126c611ef4",
+        "url": "https://api.github.com/repos/Raysance/codex-companion/commits/1a29970aee1772bf257c47703ddef2126c611ef4",
+        "html_url": "https://github.com/Raysance/codex-companion/commit/1a29970aee1772bf257c47703ddef2126c611ef4"
+      }
+    ]
+  },
+  {
+    "sha": "e16fea68bc25fc9c7488a212e0d6fc169c078f54",
+    "node_id": "C_kwDOT8H7RdoAKGUxNmZlYTY4YmMyNWZjOWM3NDg4YTIxMmUwZDZmYzE2OWMwNzhmNTQ",
+    "commit": {
+      "author": {
+        "name": "Raysance",
+        "email": "zhdxlz1101@sjtu.edu.cn",
+        "date": "2026-10-20T13:08:29Z"
+      },
+      "committer": {
+        "name": "Raysance",
+        "email": "zhdxlz1101@sjtu.edu.cn",
+        "date": "2026-10-20T13:08:29Z"
+      },
+      "message": "Unify Codex Companion package and refine native analytics UX",
+      "tree": {
+        "sha": "1c002259f61c9eec3c8f5db484957ee368a2f5fa",
+        "url": "https://api.github.com/repos/Raysance/codex-companion/git/trees/1c002259f61c9eec3c8f5db484957ee368a2f5fa"
+      },
+      "url": "https://api.github.com/repos/Raysance/codex-companion/git/commits/e16fea68bc25fc9c7488a212e0d6fc169c078f54",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/Raysance/codex-companion/commits/e16fea68bc25fc9c7488a212e0d6fc169c078f54",
+    "html_url": "https://github.com/Raysance/codex-companion/commit/e16fea68bc25fc9c7488a212e0d6fc169c078f54",
+    "comments_url": "https://api.github.com/repos/Raysance/codex-companion/commits/e16fea68bc25fc9c7488a212e0d6fc169c078f54/comments",
+    "author": {
+      "login": "Raysance",
+      "id": 35187931,
+      "node_id": "MDQ6VXNlcjM1MTg3OTMx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35187931?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Raysance",
+      "html_url": "https://github.com/Raysance",
+      "followers_url": "https://api.github.com/users/Raysance/followers",
+      "following_url": "https://api.github.com/users/Raysance/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Raysance/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Raysance/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Raysance/subscriptions",
+      "organizations_url": "https://api.github.com/users/Raysance/orgs",
+      "repos_url": "https://api.github.com/users/Raysance/repos",
+      "events_url": "https://api.github.com/users/Raysance/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Raysance/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Raysance",
+      "id": 35187931,
+      "node_id": "MDQ6VXNlcjM1MTg3OTMx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35187931?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Raysance",
+      "html_url": "https://github.com/Raysance",
+      "followers_url": "https://api.github.com/users/Raysance/followers",
+      "following_url": "https://api.github.com/users/Raysance/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Raysance/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Raysance/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Raysance/subscriptions",
+      "organizations_url": "https://api.github.com/users/Raysance/orgs",
+      "repos_url": "https://api.github.com/users/Raysance/repos",
+      "events_url": "https://api.github.com/users/Raysance/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Raysance/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b9a4709f74efb87376fe3175ef18f7ce6cf638b4",
+        "url": "https://api.github.com/repos/Raysance/codex-companion/commits/b9a4709f74efb87376fe3175ef18f7ce6cf638b4",
+        "html_url": "https://github.com/Raysance/codex-companion/commit/b9a4709f74efb87376fe3175ef18f7ce6cf638b4"
+      }
+    ]
+  }
+]

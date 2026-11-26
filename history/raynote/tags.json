@@ -1,0 +1,42 @@
+[
+  {
+    "name": "v0.3.1",
+    "zipball_url": "https://api.github.com/repos/Raysance/RayNote/zipball/refs/tags/v0.3.1",
+    "tarball_url": "https://api.github.com/repos/Raysance/RayNote/tarball/refs/tags/v0.3.1",
+    "commit": {
+      "sha": "52257eecc0c67222998a85e07723914228c68a40",
+      "url": "https://api.github.com/repos/Raysance/RayNote/commits/52257eecc0c67222998a85e07723914228c68a40"
+    },
+    "node_id": "REF_kwDOUl1JxLByZWZzL3RhZ3MvdjAuMy4x"
+  },
+  {
+    "name": "v0.3.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/RayNote/zipball/refs/tags/v0.3.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/RayNote/tarball/refs/tags/v0.3.0",
+    "commit": {
+      "sha": "ab4eaa27e4f866bec709e8173c340ecf04509044",
+      "url": "https://api.github.com/repos/Raysance/RayNote/commits/ab4eaa27e4f866bec709e8173c340ecf04509044"
+    },
+    "node_id": "REF_kwDOUl1JxLByZWZzL3RhZ3MvdjAuMy4w"
+  },
+  {
+    "name": "v0.2.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/RayNote/zipball/refs/tags/v0.2.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/RayNote/tarball/refs/tags/v0.2.0",
+    "commit": {
+      "sha": "76a8a970235f2fe9c4fe6168c46b743d7e2a5ff5",
+      "url": "https://api.github.com/repos/Raysance/RayNote/commits/76a8a970235f2fe9c4fe6168c46b743d7e2a5ff5"
+    },
+    "node_id": "REF_kwDOUl1JxLByZWZzL3RhZ3MvdjAuMi4w"
+  },
+  {
+    "name": "v0.1.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/RayNote/zipball/refs/tags/v0.1.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/RayNote/tarball/refs/tags/v0.1.0",
+    "commit": {
+      "sha": "5d645f1166d6f0b7aef1204a16d59304759c1065",
+      "url": "https://api.github.com/repos/Raysance/RayNote/commits/5d645f1166d6f0b7aef1204a16d59304759c1065"
+    },
+    "node_id": "REF_kwDOUl1JxLByZWZzL3RhZ3MvdjAuMS4w"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "v2.0.1",
+    "zipball_url": "https://api.github.com/repos/Raysance/codex-companion/zipball/refs/tags/v2.0.1",
+    "tarball_url": "https://api.github.com/repos/Raysance/codex-companion/tarball/refs/tags/v2.0.1",
+    "commit": {
+      "sha": "4b301c1ed22d946467a5b3c6dc7bd1fde37543a7",
+      "url": "https://api.github.com/repos/Raysance/codex-companion/commits/4b301c1ed22d946467a5b3c6dc7bd1fde37543a7"
+    },
+    "node_id": "REF_kwDOT8H7RbByZWZzL3RhZ3MvdjIuMC4x"
+  },
+  {
+    "name": "v1.0.1",
+    "zipball_url": "https://api.github.com/repos/Raysance/codex-companion/zipball/refs/tags/v1.0.1",
+    "tarball_url": "https://api.github.com/repos/Raysance/codex-companion/tarball/refs/tags/v1.0.1",
+    "commit": {
+      "sha": "e47dc61d8fbc33f6a104224f7887eaf896f07edd",
+      "url": "https://api.github.com/repos/Raysance/codex-companion/commits/e47dc61d8fbc33f6a104224f7887eaf896f07edd"
+    },
+    "node_id": "REF_kwDOT8H7RbByZWZzL3RhZ3MvdjEuMC4x"
+  },
+  {
+    "name": "v1.0.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/codex-companion/zipball/refs/tags/v1.0.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/codex-companion/tarball/refs/tags/v1.0.0",
+    "commit": {
+      "sha": "7f5253a778e8202bd751fac33d363103093b6d81",
+      "url": "https://api.github.com/repos/Raysance/codex-companion/commits/7f5253a778e8202bd751fac33d363103093b6d81"
+    },
+    "node_id": "REF_kwDOT8H7RbByZWZzL3RhZ3MvdjEuMC4w"
+  }
+]

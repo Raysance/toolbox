@@ -1,0 +1,101 @@
+[
+  {
+    "id": 10738290945,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RAQ",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/bug",
+    "name": "bug",
+    "color": "d73a4a",
+    "default": true,
+    "description": "Something isn't working",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290947,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RAw",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/documentation",
+    "name": "documentation",
+    "color": "0075ca",
+    "default": true,
+    "description": "Improvements or additions to documentation",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290949,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RBQ",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/duplicate",
+    "name": "duplicate",
+    "color": "cfd3d7",
+    "default": true,
+    "description": "This issue or pull request already exists",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290951,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RBw",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/enhancement",
+    "name": "enhancement",
+    "color": "a2eeef",
+    "default": true,
+    "description": "New feature or request",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290954,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RCg",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/good%20first%20issue",
+    "name": "good first issue",
+    "color": "7057ff",
+    "default": true,
+    "description": "Good for newcomers",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290953,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RCQ",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/help%20wanted",
+    "name": "help wanted",
+    "color": "008672",
+    "default": true,
+    "description": "Extra attention is needed",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290957,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1RDQ",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/invalid",
+    "name": "invalid",
+    "color": "e4e669",
+    "default": true,
+    "description": "This doesn't seem right",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290960,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1REA",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/question",
+    "name": "question",
+    "color": "d876e3",
+    "default": true,
+    "description": "Further information is requested",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 10738290962,
+    "node_id": "LA_kwDOSHULkc8AAAACgA1REg",
+    "url": "https://api.github.com/repos/Raysance/PagePilot/labels/wontfix",
+    "name": "wontfix",
+    "color": "ffffff",
+    "default": true,
+    "description": "This will not be worked on",
+    "archived_at": null,
+    "archived_by": null
+  }
+]

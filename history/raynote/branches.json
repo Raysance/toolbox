@@ -1,0 +1,19 @@
+[
+  {
+    "name": "main",
+    "commit": {
+      "sha": "52257eecc0c67222998a85e07723914228c68a40",
+      "url": "https://api.github.com/repos/Raysance/RayNote/commits/52257eecc0c67222998a85e07723914228c68a40"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Raysance/RayNote/branches/main/protection"
+  }
+]

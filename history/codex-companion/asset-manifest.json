@@ -1,0 +1,23 @@
+[
+  {
+    "release": "v2.0.1",
+    "new_tag": "codex-companion/v2.0.1",
+    "name": "CodexCompanion-v2.0.1-macOS-arm64.zip",
+    "bytes": 703926,
+    "sha256": "93663e61c3bb26d42397089e7e293eea5a49ef317d642af66221d91bdb3fe8e9"
+  },
+  {
+    "release": "v1.0.1",
+    "new_tag": "codex-companion/v1.0.1",
+    "name": "CodexProviderMigrator-v1.0.1-macOS-arm64.zip",
+    "bytes": 343920,
+    "sha256": "e842177fbd8b8ed54a519127ac5f331682fa04efc4deb313795ae808879e3a67"
+  },
+  {
+    "release": "v1.0.0",
+    "new_tag": "codex-companion/v1.0.0",
+    "name": "CodexProviderMigrator-v1.0.0-macOS-arm64.zip",
+    "bytes": 164675,
+    "sha256": "b427ce7ee083d22a64c71084c72734e24789b0f0700697f53226d24f84c97d6e"
+  }
+]
