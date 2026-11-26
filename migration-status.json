@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "migration": "verified",
+  "migration": "complete",
   "publicRepository": "https://github.com/Raysance/toolbox",
   "tools": [
     "inboxcode",
@@ -44,10 +44,15 @@
     "AuthCode"
   ],
   "originalRepositories": {
-    "codex-companion": "not-deleted",
-    "RayNote": "not-deleted",
-    "PagePilot": "not-deleted"
+    "codex-companion": "deleted",
+    "RayNote": "deleted",
+    "PagePilot": "deleted"
   },
-  "deletionBlocker": "GitHub CLI OAuth token lacks delete_repo scope; GitHub API returned HTTP 403.",
-  "backupSHA256": "cd94a5847a63a1c78d5e5a5c70cc5438ea4fcdbb192d3faa00703559901ce9b2"
+  "backupSHA256": "cd94a5847a63a1c78d5e5a5c70cc5438ea4fcdbb192d3faa00703559901ce9b2",
+  "deletionVerification": {
+    "codex-companion": "GitHub deletion succeeded; authenticated API returned 404",
+    "RayNote": "GitHub deletion succeeded; authenticated API returned 404",
+    "PagePilot": "GitHub deletion succeeded; authenticated API returned 404"
+  },
+  "originalRepositoriesDeletedOn": "2026-11-26"
 }

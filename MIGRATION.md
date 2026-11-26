@@ -26,4 +26,6 @@ InboxCode retains the internal `mailcode` extension ID, `local.mailcode.app` app
 
 ## Repository status
 
-Migration verification and original-repository deletion results are recorded in `migration-status.json` after publication.
+All three original GitHub repositories (`codex-companion`, `RayNote`, and `PagePilot`) were deleted on 2026-11-26 after Git history, release attachments, and local restoration bundles were verified. Authenticated GitHub API checks confirmed that the old repositories no longer exist. Detailed results are recorded in `migration-status.json`.
+
+Use the corresponding tool branches in `Raysance/toolbox` for future work. Original local checkouts and the migration backup remain available; old GitHub clone URLs and links are no longer valid.
