@@ -1,0 +1,57 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "mailcode",
+  "title": "InboxCode",
+  "description": "各邮箱最新验证码，后台自动复制。",
+  "icon": "icon.png",
+  "author": "raysance",
+  "license": "MIT",
+  "categories": [
+    "Productivity",
+    "Communication"
+  ],
+  "platforms": [
+    "macOS"
+  ],
+  "commands": [
+    {
+      "name": "codes",
+      "title": "验证码",
+      "description": "查看每个邮箱最新的验证码",
+      "mode": "view",
+      "keywords": [
+        "otp",
+        "code",
+        "mail",
+        "验证码",
+        "inboxcode"
+      ]
+    },
+    {
+      "name": "accounts",
+      "title": "管理邮箱",
+      "description": "添加邮箱及设置自动复制",
+      "mode": "view",
+      "keywords": [
+        "imap",
+        "邮箱",
+        "inboxcode"
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "bundle": "ray bundle",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@raycast/api": "2.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}

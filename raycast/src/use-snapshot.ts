@@ -1,0 +1,46 @@
+import { showToast, Toast } from "@raycast/api";
+import { useCallback, useEffect, useState } from "react";
+import { rawRequest, request, Snapshot } from "./bridge";
+
+export function useSnapshot(fetchMail = false) {
+  const [snapshot, setSnapshot] = useState<Snapshot>();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string>();
+  const refresh = useCallback(async () => {
+    setLoading(true);
+    try {
+      setSnapshot(await request({ action: fetchMail ? "refresh" : "list" }));
+      setError(undefined);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "连接失败";
+      setError(message);
+      await showToast({ style: Toast.Style.Failure, title: "无法获取验证码", message });
+    } finally { setLoading(false); }
+  }, [fetchMail]);
+  useEffect(() => {
+    let active = true;
+    let polling = false;
+    (async () => {
+      try {
+        const first = await request({ action: "list" });
+        if (!active) return;
+        setSnapshot(first);
+        if (fetchMail && first.accounts.some(({ account }) => account.enabled)) {
+          const refreshed = await request({ action: "refresh" });
+          if (active) setSnapshot(refreshed);
+        }
+      } catch (error) {
+        if (active) setError(error instanceof Error ? error.message : "后台连接失败");
+      } finally { if (active) setLoading(false); }
+    })();
+    const interval = setInterval(async () => {
+      if (polling) return;
+      polling = true;
+      try { const next = await rawRequest({ action: "list" }); if (active) setSnapshot(next); }
+      catch { /* Explicit refresh reports connection errors without repetitive toasts. */ }
+      finally { polling = false; }
+    }, 3000);
+    return () => { active = false; clearInterval(interval); };
+  }, [fetchMail]);
+  return { snapshot, setSnapshot, loading, error, refresh };
+}
