@@ -1,0 +1,16 @@
+.DS_Store
+.build/
+.swiftpm/
+node_modules/
+dist/
+outputs/
+*.app/
+*.rayext
+*.zip
+__pycache__/
+*.pyc
+.env
+.env.*
+import.txt
+*.sqlite*
+*.db
