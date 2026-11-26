@@ -20,7 +20,7 @@ Supported settings: SHA1, SHA256, SHA512; 6, 7, or 8 digits; configurable period
 
 ## Install on another Mac
 
-Requires Raycast. Open the included `local-2fa.rayext` file to install. Account data is not included in the extension package.
+Requires Raycast. Download the AuthCode package from [Toolbox Releases](https://github.com/Raysance/toolbox/releases), then open the `AuthCode.rayext` file to install. Account data is not included in the extension package.
 
 For an initial import, save newline-separated `otpauth://totp/` entries as:
 
@@ -33,6 +33,8 @@ The first run imports the file into Raycast's encrypted local storage and delete
 ## Build from source
 
 ```sh
+git clone --branch authcode --single-branch https://github.com/Raysance/toolbox.git AuthCode
+cd AuthCode
 npm ci
 npm test
 npm run build
