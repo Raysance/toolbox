@@ -1,0 +1,46 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "local-2fa",
+  "title": "AuthCode",
+  "description": "Instant offline verification codes.",
+  "icon": "icon.png",
+  "author": "raysance",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "codes",
+      "title": "AuthCode",
+      "description": "Show and copy your verification codes",
+      "mode": "view",
+      "keywords": [
+        "2fa",
+        "otp",
+        "totp",
+        "authenticator",
+        "验证码",
+        "authcode"
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@raycast/api": "latest",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}
