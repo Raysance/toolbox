@@ -1,0 +1,19 @@
+[
+  {
+    "name": "main",
+    "commit": {
+      "sha": "2aeddf659b4c89c8101738066e9e1d241f946b84",
+      "url": "https://api.github.com/repos/Raysance/microsoft-authenticator-totp-export/commits/2aeddf659b4c89c8101738066e9e1d241f946b84"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Raysance/microsoft-authenticator-totp-export/branches/main/protection"
+  }
+]

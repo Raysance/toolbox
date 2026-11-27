@@ -1,0 +1,112 @@
+[
+  {
+    "id": 11840111657,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEKQ",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/accessibility",
+    "name": "accessibility",
+    "color": "f143ab",
+    "default": true,
+    "description": "Barrier affecting people with disabilities",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111647,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEHw",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/bug",
+    "name": "bug",
+    "color": "d73a4a",
+    "default": true,
+    "description": "Something isn't working",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111663,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnELw",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/documentation",
+    "name": "documentation",
+    "color": "0075ca",
+    "default": true,
+    "description": "Improvements or additions to documentation",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111672,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEOA",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/duplicate",
+    "name": "duplicate",
+    "color": "cfd3d7",
+    "default": true,
+    "description": "This issue or pull request already exists",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111678,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEPg",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/enhancement",
+    "name": "enhancement",
+    "color": "a2eeef",
+    "default": true,
+    "description": "New feature or request",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111694,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnETg",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/good%20first%20issue",
+    "name": "good first issue",
+    "color": "7057ff",
+    "default": true,
+    "description": "Good for newcomers",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111685,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnERQ",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/help%20wanted",
+    "name": "help wanted",
+    "color": "008672",
+    "default": true,
+    "description": "Extra attention is needed",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111708,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEXA",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/invalid",
+    "name": "invalid",
+    "color": "e4e669",
+    "default": true,
+    "description": "This doesn't seem right",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111716,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEZA",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/question",
+    "name": "question",
+    "color": "d876e3",
+    "default": true,
+    "description": "Further information is requested",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 11840111728,
+    "node_id": "LA_kwDOT5Fyxc8AAAACwbnEcA",
+    "url": "https://api.github.com/repos/Raysance/EdgeSwipe/labels/wontfix",
+    "name": "wontfix",
+    "color": "ffffff",
+    "default": true,
+    "description": "This will not be worked on",
+    "archived_at": null,
+    "archived_by": null
+  }
+]

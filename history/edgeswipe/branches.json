@@ -1,0 +1,19 @@
+[
+  {
+    "name": "main",
+    "commit": {
+      "sha": "031a8d72a44c029605b439cc9cdb6847e9a40bbd",
+      "url": "https://api.github.com/repos/Raysance/EdgeSwipe/commits/031a8d72a44c029605b439cc9cdb6847e9a40bbd"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/Raysance/EdgeSwipe/branches/main/protection"
+  }
+]

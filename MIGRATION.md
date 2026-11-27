@@ -29,3 +29,14 @@ InboxCode retains the internal `mailcode` extension ID, `local.mailcode.app` app
 All three original GitHub repositories (`codex-companion`, `RayNote`, and `PagePilot`) were deleted on 2026-11-26 after Git history, release attachments, and local restoration bundles were verified. Authenticated GitHub API checks confirmed that the old repositories no longer exist. Detailed results are recorded in `migration-status.json`.
 
 Use the corresponding tool branches in `Raysance/toolbox` for future work. Original local checkouts and the migration backup remain available; old GitHub clone URLs and links are no longer valid.
+
+## Additional tools · 2026-11-27
+
+| Tool | Original main HEAD | Original commits | Namespaced original tags |
+| --- | --- | --- | --- |
+| microsoft-authenticator-totp-export | `2aeddf659b4c89c8101738066e9e1d241f946b84` | 2 | None |
+| EdgeSwipe | `031a8d72a44c029605b439cc9cdb6847e9a40bbd` | 9 | `edgeswipe/v0.1.0`, `edgeswipe/v0.2.0`, `edgeswipe/v0.3.0`, `edgeswipe/v0.4.0`, `edgeswipe/v0.5.0` |
+
+Both tools retain their original commit objects; only migration documentation and the SDK repository/install URLs are changed in new commits. Each has a single original main branch and neither has issues, PRs, or a wiki. EdgeSwipe has five releases with five ZIP attachments; the Microsoft exporter has no releases or tags. GitHub records and SHA-256 manifests are archived under their respective `history/<tool>/` directories.
+
+A separate restoration archive, `toolbox-history-backup-2026-11-27.zip`, preserves both original Git bundles, GitHub metadata, and all five original release attachments. The 2026-11-26 backup is unchanged. Original repository deletion is pending remote verification.

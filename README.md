@@ -10,6 +10,8 @@ Raysance 的本地应用与效率工具。每个工具使用独立分支，`main
 | [Codex Companion](https://github.com/Raysance/toolbox/tree/codex-companion) | `codex-companion` | 本地 Codex 用量、配额与输入分析 |
 | [RayNote](https://github.com/Raysance/toolbox/tree/raynote) | `raynote` | 本地原生笔记 |
 | [PagePilot](https://github.com/Raysance/toolbox/tree/pagepilot) | `pagepilot` | 浏览器标签分组和自然语言搜索 |
+| [EdgeSwipe](https://github.com/Raysance/toolbox/tree/edgeswipe) | `edgeswipe` | macOS 触控板边缘与角落手势快捷操作 |
+| [Microsoft Authenticator TOTP Export](https://github.com/Raysance/toolbox/tree/microsoft-authenticator-totp-export) | `microsoft-authenticator-totp-export` | 从微软 Authenticator 云备份导出 TOTP 密钥的 Python SDK |
 
 ## 获取工具
 
@@ -23,7 +25,7 @@ git clone --branch inboxcode --single-branch https://github.com/Raysance/toolbox
 
 ## 历史迁移
 
-Codex Companion、RayNote、PagePilot 的 Git 历史保留原提交对象、作者和提交时间。工具分支直接接续原 `main`，没有压成单次源码提交；原标签添加工具名前缀。InboxCode、AuthCode 和 FolderBridge 此前没有独立 Git 提交历史，以本次整理的源码作为首个版本。
+Codex Companion、RayNote、PagePilot、EdgeSwipe、Microsoft Authenticator TOTP Export 的 Git 历史保留原提交对象、作者和提交时间。工具分支直接接续原 `main`，没有压成单次源码提交；原标签添加工具名前缀。InboxCode、AuthCode 和 FolderBridge 此前没有独立 Git 提交历史，以本次整理的源码作为首个版本。
 
 - [迁移说明与提交映射](MIGRATION.md)
 - [原 GitHub 元数据与 PR 档案](history/)

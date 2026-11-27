@@ -1,0 +1,37 @@
+[
+  {
+    "release": "v0.5.0",
+    "new_tag": "edgeswipe/v0.5.0",
+    "name": "EdgeSwipe-v0.5.0.zip",
+    "bytes": 182058,
+    "sha256": "61f978aa26285900eb1bbe4e0566c4f0863849c2c451877141213f6f334f883b"
+  },
+  {
+    "release": "v0.4.0",
+    "new_tag": "edgeswipe/v0.4.0",
+    "name": "EdgeSwipe-v0.4.0.zip",
+    "bytes": 163695,
+    "sha256": "4957d39bafa04d822b8aa322fff5496b2a2df6e92985be0680cb9a81b13d4cfb"
+  },
+  {
+    "release": "v0.3.0",
+    "new_tag": "edgeswipe/v0.3.0",
+    "name": "EdgeSwipe-v0.3.0.app.zip",
+    "bytes": 153078,
+    "sha256": "ba08e660bab26fe8449db9246762e0af5b4087a186f715bb8c66623431aed38c"
+  },
+  {
+    "release": "v0.2.0",
+    "new_tag": "edgeswipe/v0.2.0",
+    "name": "EdgeSwipe-v0.2.0.app.zip",
+    "bytes": 122627,
+    "sha256": "66e0dbcf62d92cd5121e747bf6a0fbe6215993c15d1fe1e4f4e51d2366ddb771"
+  },
+  {
+    "release": "v0.1.0",
+    "new_tag": "edgeswipe/v0.1.0",
+    "name": "EdgeSwipe-v0.1.0.app.zip",
+    "bytes": 99167,
+    "sha256": "287313ea803282b245b8dcb4517302a8854e2b53f12790ff942396e4278ebb1d"
+  }
+]

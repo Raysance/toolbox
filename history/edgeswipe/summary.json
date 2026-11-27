@@ -1,0 +1,16 @@
+{
+  "repo": "EdgeSwipe",
+  "branch": "edgeswipe",
+  "defaultBranch": "main",
+  "originalHead": "031a8d72a44c029605b439cc9cdb6847e9a40bbd",
+  "commits": 9,
+  "branches": [
+    "main"
+  ],
+  "tags": 5,
+  "releases": 5,
+  "assets": 5,
+  "issuesAndPRs": 0,
+  "pulls": 0,
+  "wiki": false
+}

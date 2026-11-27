@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "migration": "complete",
+  "migration": "verifying additional tools",
   "publicRepository": "https://github.com/Raysance/toolbox",
   "tools": [
     "inboxcode",
@@ -8,7 +8,9 @@
     "folderbridge",
     "codex-companion",
     "raynote",
-    "pagepilot"
+    "pagepilot",
+    "microsoft-authenticator-totp-export",
+    "edgeswipe"
   ],
   "originalHistory": {
     "codex-companion": {
@@ -28,6 +30,22 @@
       "tagObjectsPreserved": true,
       "remoteVerified": true,
       "originalUnchanged": true
+    },
+    "microsoft-authenticator-totp-export": {
+      "commitsPreserved": 2,
+      "tagObjectsPreserved": true,
+      "remoteVerified": false,
+      "originalUnchanged": true,
+      "originalHead": "2aeddf659b4c89c8101738066e9e1d241f946b84",
+      "toolboxBranch": "microsoft-authenticator-totp-export"
+    },
+    "EdgeSwipe": {
+      "commitsPreserved": 9,
+      "tagObjectsPreserved": true,
+      "remoteVerified": false,
+      "originalUnchanged": true,
+      "originalHead": "031a8d72a44c029605b439cc9cdb6847e9a40bbd",
+      "toolboxBranch": "edgeswipe"
     }
   },
   "releases": {
@@ -46,7 +64,9 @@
   "originalRepositories": {
     "codex-companion": "deleted",
     "RayNote": "deleted",
-    "PagePilot": "deleted"
+    "PagePilot": "deleted",
+    "microsoft-authenticator-totp-export": "pending deletion after remote verification",
+    "EdgeSwipe": "pending deletion after remote verification"
   },
   "backupSHA256": "cd94a5847a63a1c78d5e5a5c70cc5438ea4fcdbb192d3faa00703559901ce9b2",
   "deletionVerification": {
@@ -54,5 +74,19 @@
     "RayNote": "GitHub deletion succeeded; authenticated API returned 404",
     "PagePilot": "GitHub deletion succeeded; authenticated API returned 404"
   },
-  "originalRepositoriesDeletedOn": "2026-11-26"
+  "originalRepositoriesDeletedOn": "2026-11-26",
+  "lastUpdated": "2026-11-27",
+  "additionalMigrations": {
+    "2026-11-27": {
+      "tools": [
+        "microsoft-authenticator-totp-export",
+        "edgeswipe"
+      ],
+      "backupFile": "toolbox-history-backup-2026-11-27.zip",
+      "backupSHA256": "c8d21408fe6544b4f732d1ab2d30e2ec50b762e184785eb11a6e037f55f75df1",
+      "releases": 5,
+      "assets": 5,
+      "remoteVerified": false
+    }
+  }
 }

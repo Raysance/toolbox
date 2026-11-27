@@ -1,0 +1,52 @@
+[
+  {
+    "name": "v0.5.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/zipball/refs/tags/v0.5.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/tarball/refs/tags/v0.5.0",
+    "commit": {
+      "sha": "031a8d72a44c029605b439cc9cdb6847e9a40bbd",
+      "url": "https://api.github.com/repos/Raysance/EdgeSwipe/commits/031a8d72a44c029605b439cc9cdb6847e9a40bbd"
+    },
+    "node_id": "REF_kwDOT5FyxbByZWZzL3RhZ3MvdjAuNS4w"
+  },
+  {
+    "name": "v0.4.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/zipball/refs/tags/v0.4.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/tarball/refs/tags/v0.4.0",
+    "commit": {
+      "sha": "86db3961bf7e2ff9bc62e66a6678391ea07fe4e1",
+      "url": "https://api.github.com/repos/Raysance/EdgeSwipe/commits/86db3961bf7e2ff9bc62e66a6678391ea07fe4e1"
+    },
+    "node_id": "REF_kwDOT5FyxbByZWZzL3RhZ3MvdjAuNC4w"
+  },
+  {
+    "name": "v0.3.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/zipball/refs/tags/v0.3.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/tarball/refs/tags/v0.3.0",
+    "commit": {
+      "sha": "dda86c688af7c0d85bd5c89d527a6f5ed75a339b",
+      "url": "https://api.github.com/repos/Raysance/EdgeSwipe/commits/dda86c688af7c0d85bd5c89d527a6f5ed75a339b"
+    },
+    "node_id": "REF_kwDOT5FyxbByZWZzL3RhZ3MvdjAuMy4w"
+  },
+  {
+    "name": "v0.2.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/zipball/refs/tags/v0.2.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/tarball/refs/tags/v0.2.0",
+    "commit": {
+      "sha": "197397a656ecfe97872676dc0e5761496756442b",
+      "url": "https://api.github.com/repos/Raysance/EdgeSwipe/commits/197397a656ecfe97872676dc0e5761496756442b"
+    },
+    "node_id": "REF_kwDOT5FyxbByZWZzL3RhZ3MvdjAuMi4w"
+  },
+  {
+    "name": "v0.1.0",
+    "zipball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/zipball/refs/tags/v0.1.0",
+    "tarball_url": "https://api.github.com/repos/Raysance/EdgeSwipe/tarball/refs/tags/v0.1.0",
+    "commit": {
+      "sha": "58846965685a2d236b5a37551e910bee8b22a806",
+      "url": "https://api.github.com/repos/Raysance/EdgeSwipe/commits/58846965685a2d236b5a37551e910bee8b22a806"
+    },
+    "node_id": "REF_kwDOT5FyxbByZWZzL3RhZ3MvdjAuMS4w"
+  }
+]

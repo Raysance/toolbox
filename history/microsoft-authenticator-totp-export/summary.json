@@ -1,0 +1,16 @@
+{
+  "repo": "microsoft-authenticator-totp-export",
+  "branch": "microsoft-authenticator-totp-export",
+  "defaultBranch": "main",
+  "originalHead": "2aeddf659b4c89c8101738066e9e1d241f946b84",
+  "commits": 2,
+  "branches": [
+    "main"
+  ],
+  "tags": 0,
+  "releases": 0,
+  "assets": 0,
+  "issuesAndPRs": 0,
+  "pulls": 0,
+  "wiki": false
+}
