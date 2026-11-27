@@ -1,5 +1,8 @@
 # Microsoft Authenticator TOTP Export
 
+> This project now lives in the **`microsoft-authenticator-totp-export`** branch of [Raysance/toolbox](https://github.com/Raysance/toolbox/tree/microsoft-authenticator-totp-export). Original commits and version tags are preserved. [Toolbox catalog](https://github.com/Raysance/toolbox) · [Migration history](https://github.com/Raysance/toolbox/blob/main/MIGRATION.md)
+
+
 A Python SDK for macOS with two operations:
 
 - Sign in to Microsoft and obtain reusable login state.
@@ -10,7 +13,7 @@ Requires macOS, Python 3.10 or later, and the Microsoft personal account used fo
 ## Install
 
 ```bash
-python3 -m pip install "git+https://github.com/Raysance/microsoft-authenticator-totp-export.git"
+python3 -m pip install "git+https://github.com/Raysance/toolbox.git@microsoft-authenticator-totp-export"
 ```
 
 From a downloaded source directory, use `python3 -m pip install .`.

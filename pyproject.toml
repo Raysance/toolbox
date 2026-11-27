@@ -17,7 +17,7 @@ dependencies = [
 classifiers = ["Operating System :: MacOS", "Programming Language :: Python :: 3"]
 
 [project.urls]
-Repository = "https://github.com/Raysance/microsoft-authenticator-totp-export"
+Repository = "https://github.com/Raysance/toolbox/tree/microsoft-authenticator-totp-export"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10", "jwcrypto>=1.5,<2"]
