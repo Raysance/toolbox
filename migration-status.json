@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "migration": "verifying additional tools",
+  "migration": "complete",
   "publicRepository": "https://github.com/Raysance/toolbox",
   "tools": [
     "inboxcode",
@@ -34,7 +34,7 @@
     "microsoft-authenticator-totp-export": {
       "commitsPreserved": 2,
       "tagObjectsPreserved": true,
-      "remoteVerified": false,
+      "remoteVerified": true,
       "originalUnchanged": true,
       "originalHead": "2aeddf659b4c89c8101738066e9e1d241f946b84",
       "toolboxBranch": "microsoft-authenticator-totp-export"
@@ -42,15 +42,15 @@
     "EdgeSwipe": {
       "commitsPreserved": 9,
       "tagObjectsPreserved": true,
-      "remoteVerified": false,
+      "remoteVerified": true,
       "originalUnchanged": true,
       "originalHead": "031a8d72a44c029605b439cc9cdb6847e9a40bbd",
       "toolboxBranch": "edgeswipe"
     }
   },
   "releases": {
-    "releases": 9,
-    "assets": 20,
+    "releases": 14,
+    "assets": 25,
     "sha256Verified": true
   },
   "ci": {
@@ -65,16 +65,17 @@
     "codex-companion": "deleted",
     "RayNote": "deleted",
     "PagePilot": "deleted",
-    "microsoft-authenticator-totp-export": "pending deletion after remote verification",
-    "EdgeSwipe": "pending deletion after remote verification"
+    "microsoft-authenticator-totp-export": "deleted",
+    "EdgeSwipe": "deleted"
   },
   "backupSHA256": "cd94a5847a63a1c78d5e5a5c70cc5438ea4fcdbb192d3faa00703559901ce9b2",
   "deletionVerification": {
     "codex-companion": "GitHub deletion succeeded; authenticated API returned 404",
     "RayNote": "GitHub deletion succeeded; authenticated API returned 404",
-    "PagePilot": "GitHub deletion succeeded; authenticated API returned 404"
+    "PagePilot": "GitHub deletion succeeded; authenticated API returned 404",
+    "microsoft-authenticator-totp-export": "GitHub deletion succeeded; authenticated API returned 404",
+    "EdgeSwipe": "GitHub deletion succeeded; authenticated API returned 404"
   },
-  "originalRepositoriesDeletedOn": "2026-11-26",
   "lastUpdated": "2026-11-27",
   "additionalMigrations": {
     "2026-11-27": {
@@ -86,7 +87,15 @@
       "backupSHA256": "c8d21408fe6544b4f732d1ab2d30e2ec50b762e184785eb11a6e037f55f75df1",
       "releases": 5,
       "assets": 5,
-      "remoteVerified": false
+      "remoteVerified": true,
+      "originalRepositoriesDeleted": true
     }
+  },
+  "originalRepositoryDeletionDates": {
+    "codex-companion": "2026-11-26",
+    "RayNote": "2026-11-26",
+    "PagePilot": "2026-11-26",
+    "microsoft-authenticator-totp-export": "2026-11-27",
+    "EdgeSwipe": "2026-11-27"
   }
 }
