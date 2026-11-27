@@ -1,5 +1,8 @@
 # EdgeSwipe
 
+> This project now lives in the **`edgeswipe`** branch of [Raysance/toolbox](https://github.com/Raysance/toolbox/tree/edgeswipe). Original commits and version tags are preserved. [Toolbox catalog](https://github.com/Raysance/toolbox) · [Migration history](https://github.com/Raysance/toolbox/blob/main/MIGRATION.md)
+
+
 EdgeSwipe is a lightweight macOS menu-bar app that turns trackpad edge and corner swipes into shortcuts.
 
 It is built for people who want Notification Center-style gestures, but with their own actions: open Control Center, lock the screen, launch a URL or file, run a shell command, switch to a specific app, or simply show a quick HUD confirmation.
@@ -90,7 +93,12 @@ If a permission is missing, EdgeSwipe shows an `Accessibility Needed` HUD.
 
 EdgeSwipe requires macOS 13 or newer and Swift Package Manager.
 
-Run directly from source:
+Clone the tool branch, then run directly from source:
+
+```sh
+git clone --branch edgeswipe --single-branch https://github.com/Raysance/toolbox.git EdgeSwipe
+cd EdgeSwipe
+```
 
 ```sh
 swift run EdgeSwipe
